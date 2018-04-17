@@ -5,15 +5,25 @@
 "use strict";
 
 import React from 'react';
-import './CustomLeftNav.css';
-import {Link} from 'react-router-dom';
+import '../../css/CustomLeftNav.css';
+import Frame from 'react-frame-component';
+
+import {Sidebar, SidebarItem, Link} from 'react-router-dom';
+import Member from '../component/Member';
+
 
 export default class CustomLeftNav extends React.Component {
     render(){
+
+        const Header = ({ children }) => (
+            <Frame>
+                <h1>{children}</h1>
+            </Frame>
+        );
         return(
             <div>
                 <ul>
-                    <li><Link to={"hoa"}>GetMemberHeartDetails</Link></li>
+                    <li><Link to={"member"}>GetMemberHeartDetails</Link></li>
                     <li><Link to={"home"}>GetBehaviorQuestions</Link></li>
                     <li><Link to={"news"}>GetMemberResponsesByMemberCeid</Link></li>
                     <li><Link to={"about"}>GetMemberAttributesByMemberCeId</Link></li>
@@ -28,6 +38,7 @@ export default class CustomLeftNav extends React.Component {
                     <li><Link to={"about"}>MemberGoalGetByMemberAndGoalIdAndInstanceId</Link></li>
                 </ul>
             </div>
+
         )
     }
 }

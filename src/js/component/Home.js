@@ -10,6 +10,7 @@ import SearchMain from './SearchMain';
 import '../../css/Home.css';
 import {Link} from 'react-router-dom';
 import {Jumbotron, Grid, Row, Col, Image, Button} from 'react-bootstrap';
+import NavBar from "./NavBar";
 
 
 export default class Home extends React.Component {
@@ -17,11 +18,9 @@ export default class Home extends React.Component {
     render(){
         console.log('Inside Home!!');
         return(
-            <div className="main-wrapper">
+            <div>
                 <Grid>
-                    <Row>
-                        <Col md={12}><Image src="../../../images/black-banner.png" className="header-image" /></Col>
-                    </Row>
+                    <Row><NavBar/></Row>
                     <Row>
                         <SearchMain/>
                     </Row>

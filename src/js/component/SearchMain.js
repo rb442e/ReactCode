@@ -17,9 +17,9 @@ class SearchMain extends React.Component {
         }
     }
     handleSubmit(e){
-        const mid = this.state.memberPlanId;
+        const mId = this.state.memberPlanId;
         e.preventDefault();
-        this.props.history.push('/member', mid);
+        this.props.history.push('/member', mId);
     };
 
     render(){

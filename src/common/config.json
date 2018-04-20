@@ -5,7 +5,7 @@
   "mahServices": {
     "member":"/ahm/ods/getMemberDetails",
     "healthAssessments":"/ahm/health-assessments",
-    "monitoredEvents":""
+    "monitoredEvents":"/ahm/monitored-events"
   }
 
 }
